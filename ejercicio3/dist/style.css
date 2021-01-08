@@ -1,0 +1,8 @@
+* {
+  box-sizing: content-box;
+}
+
+.draggable {
+  width: 32rem;
+  height: 20rem;
+}
