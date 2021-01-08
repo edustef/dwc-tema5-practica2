@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My portofolio website!">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+  <title>title</title>
+</head>
+
+<body class="bg-gray-100">
+  <div class="pt-8 container mx-auto px-4">
+    <!-- My Profile Image -->
+    <h1 class="text-5xl font-bold">Conversor de divisas</h1>
+    <form class="flex flex-col max-w-lg mt-4 bg-white p-4 rounded-md shadow-md">
+      <label class="font-semibold" for="cantidad">Cantidad en Euro:</label>
+      <div class="h-10">
+        <input id="cantidad" required name="cantidad" type="number" min="1" step="any" class='shadow-md h-full border rounded-md px-3 py-2'>
+        en
+        <select name="type" id="" class="h-full border py-1">
+          <option value="RON">Romanian Leu</option>
+          <option value="USD">Dollar</option>
+          <option value="JPY">Yen</option>
+        </select>
+      </div>
+      <div id="result" class="py-4 my-4 text-center bg-gray-100 text-gray-600 font-semibold text-2xl">
+        0
+      </div>
+      <button type="submit" class="text-white bg-green-500 hover:bg-green-600 py-2 font-bold text-lg mt-4 uppercase">convertir</button>
+    </form>
+  </div>
+  <script>
+    const BASE = 'EUR';
+    let rates = {};
+    let date = '';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await getExchangeRate();
+    });
+
+    document.querySelector('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await getExchangeRate();
+      let fd = new FormData(e.target);
+      console.log('hello');
+      document.getElementById('result').textContent = exchangeRate(fd.get('cantidad'), fd.get('type'));
+    });
+
+    async function getExchangeRate() {
+      const res = await fetch(`https://api.exchangeratesapi.io/latest?base=${BASE}`);
+      const data = await res.json();
+      rates = await data.rates;
+      date = await data.date;
+    }
+
+    function exchangeRate(cantidad, type) {
+      return cantidad * rates[type];
+    }
+  </script>
+</body>
+
+</html>
