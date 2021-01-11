@@ -5,17 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicio 3</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dist/style.css">
   <script src="dist/script.js" defer>
   </script>
 </head>
 
 <body class="container">
-  <div class="empty"></div>
-  <div draggable="true" class="draggable blue">card 1</div>
-  <div draggable="true" class="draggable red">card 2</div>
-  <div draggable="true" class="draggable green">card 3</div>
-  <div class="empty"></div>
+  <div class="droppable">
+  </div>
+  <div class="droppable">
+    <div id="card1" draggable="true" class="draggable blue">card 1</div>
+  </div>
+  <div class="droppable">
+    <div id="card2" draggable="true" class="draggable red">card 2</div>
+  </div>
+  <div class="droppable">
+    <div id="card3" draggable="true" class="draggable green">card 3</div>
+  </div>
+  <div class="droppable"></div>
 </body>
 
 </html>

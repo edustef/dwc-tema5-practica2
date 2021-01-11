@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Ejercicio 4</title>
+</head>
+
+<body class="container h-screen mx-auto p-4">
+  <h1 class="text-5xl">Ejercicio 4</h1>
+
+  <div class="carousel-container overflow-hidden relative">
+    <div class="carousel-slide flex w-full" style="height:600px">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1418985227304-f32df7d84e39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1502786129293-79981df4e689?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1427&q=80">
+      <img class="object-cover"
+        src="https://images.unsplash.com/photo-1445217143695-467124038776?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1433&q=80">
+    </div>
+    <div class="button-group absolute top-0 flex w-full h-full justify-between items-center">
+      <button id="prev" class="z-10 mx-6">
+        <svg class="w-12 h-12 hover:text-gray-400 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="next" class="z-10 mx-6">
+        <svg class="w-12 h-12 hover:text-gray-400 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
